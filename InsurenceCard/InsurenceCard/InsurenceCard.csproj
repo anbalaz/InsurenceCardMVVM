@@ -72,6 +72,9 @@
     <EmbeddedResource Include="FrmSelectCountryMenu.resx">
       <DependentUpon>FrmSelectCountryMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IdentityCardShow.resx">
+      <DependentUpon>IdentityCardShow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

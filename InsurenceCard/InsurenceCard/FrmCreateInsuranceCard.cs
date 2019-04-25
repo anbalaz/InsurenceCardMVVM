@@ -54,9 +54,9 @@ namespace InsurenceCard
 
         private void bttnOK_Click(object sender, EventArgs e)
         {
-            using (IdentityCardShow newFrm = new IdentityCardShow())
+            using (IdentityCardShow newFrm = new IdentityCardShow(new IdentityCardShowViewModel(_selectedCountryViewModel.GetUser())))
             {
-                newFrm.Show();
+                newFrm.ShowDialog();
             }
         }
     }

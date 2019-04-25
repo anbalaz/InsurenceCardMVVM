@@ -1,11 +1,10 @@
-﻿using System;
+﻿using Support.Model;
+using System;
 
 namespace Support.Service
 {
     public class SelectedCountryService
     {
-
-
         public DateTime GetDateOfBirth(string personId)
         {
             string year = personId.Substring(0, 2);
@@ -21,5 +20,6 @@ namespace Support.Service
         {
             return DateTime.Now;
         }
+
     }
 }

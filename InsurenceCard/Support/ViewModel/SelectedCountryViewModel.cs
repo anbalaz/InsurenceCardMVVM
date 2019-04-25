@@ -1,4 +1,5 @@
-﻿using Support.Service;
+﻿using Support.Model;
+using Support.Service;
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -54,6 +55,20 @@ namespace Support.ViewModel
         {
             ValidationDate = _selectedCountryService.GenerateValidationDate();
             NotifyPropertyChanged();
+        }
+
+
+        public User GetUser()
+        {
+            return new User()
+            {
+                Id = 1,
+                FirstName = FirstName,
+                LastName = LastName,
+                BirthDate = GetDateOfBirth,
+                PersonIdNumber = PersonIdNumber,
+                ValidFrom = ValidationDate
+            };
         }
 
         public void SaveInsuranceCard()

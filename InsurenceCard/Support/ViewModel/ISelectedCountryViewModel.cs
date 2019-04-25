@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using Support.Model;
 
 namespace Support.ViewModel
 {
@@ -11,7 +12,10 @@ namespace Support.ViewModel
         string PersonIdNumber { get; set; }
         DateTime ValidationDate { get; set; }
 
+        event PropertyChangedEventHandler PropertyChanged;
+
         void GenerateValidationDate();
+        User GetUser();
         void SaveInsuranceCard();
     }
 }
