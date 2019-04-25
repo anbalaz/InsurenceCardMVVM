@@ -74,7 +74,8 @@
             // 
             this.txtBxValidationDate.Location = new System.Drawing.Point(139, 198);
             this.txtBxValidationDate.Name = "txtBxValidationDate";
-            this.txtBxValidationDate.Size = new System.Drawing.Size(100, 20);
+            this.txtBxValidationDate.ReadOnly = true;
+            this.txtBxValidationDate.Size = new System.Drawing.Size(139, 20);
             this.txtBxValidationDate.TabIndex = 5;
             // 
             // label1
@@ -118,7 +119,7 @@
             this.txtBxBirthDate.Location = new System.Drawing.Point(139, 160);
             this.txtBxBirthDate.Name = "txtBxBirthDate";
             this.txtBxBirthDate.ReadOnly = true;
-            this.txtBxBirthDate.Size = new System.Drawing.Size(100, 20);
+            this.txtBxBirthDate.Size = new System.Drawing.Size(139, 20);
             this.txtBxBirthDate.TabIndex = 10;
             // 
             // FrmCreateInsuranceCard

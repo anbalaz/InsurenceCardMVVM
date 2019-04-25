@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Support.Service;
+using Support.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,11 +16,12 @@ namespace InsurenceCard
         [STAThread]
         static void Main()
         {
-
+            SelectedCountryService selectedCountryService = new SelectedCountryService();
+            ISelectedCountryViewModel selectedCountryViewModel = new SelectedCountryViewModel(selectedCountryService);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSelectCountryMenu());
+            Application.Run(new FrmSelectCountryMenu(selectedCountryViewModel));
         }
     }
 }

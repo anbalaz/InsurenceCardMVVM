@@ -5,11 +5,11 @@ namespace Support.ViewModel
     public interface ISelectedCountryViewModel
     {
         string FirstName { get; set; }
+        DateTime GetDateOfBirth { get; set; }
         string LastName { get; set; }
-        int PersonIdNumber { get; set; }
+        string PersonIdNumber { get; set; }
         DateTime ValidationDate { get; set; }
 
-        DateTime GetDateOfBirth();
         void SaveInsuranceCard();
     }
 }

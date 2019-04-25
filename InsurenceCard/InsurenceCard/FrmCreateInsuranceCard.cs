@@ -1,20 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Support.ViewModel;
+using System;
 using System.Windows.Forms;
 
 namespace InsurenceCard
 {
     public partial class FrmCreateInsuranceCard : Form
     {
-        public FrmCreateInsuranceCard()
+        ISelectedCountryViewModel _selectedCountryViewModel;
+        public FrmCreateInsuranceCard(ISelectedCountryViewModel selectedCountryViewModel)
         {
             InitializeComponent();
+            _selectedCountryViewModel = selectedCountryViewModel;
+            BindControls();
+        }
+
+        private void BindControls()
+        {
+            txtBxFirstName.DataBindings.Add(nameof(txtBxFirstName.Text),
+                _selectedCountryViewModel,
+                nameof(_selectedCountryViewModel.FirstName),
+                true,
+                DataSourceUpdateMode.OnValidation);
+
+            txtBxLastName.DataBindings.Add(nameof(txtBxLastName.Text),
+                _selectedCountryViewModel,
+                nameof(_selectedCountryViewModel.LastName),
+                true,
+                DataSourceUpdateMode.OnValidation);
+
+            txtBxPersonalID.DataBindings.Add(nameof(txtBxPersonalID.Text),
+                _selectedCountryViewModel,
+                nameof(_selectedCountryViewModel.PersonIdNumber),
+                true,
+                DataSourceUpdateMode.OnValidation);
+
+            txtBxBirthDate.DataBindings.Add(nameof(txtBxBirthDate.Text),
+                _selectedCountryViewModel,
+                nameof(_selectedCountryViewModel.GetDateOfBirth),
+                true,
+                DataSourceUpdateMode.OnValidation);
+
+            txtBxValidationDate.DataBindings.Add(nameof(txtBxValidationDate.Text),
+                _selectedCountryViewModel,
+                nameof(_selectedCountryViewModel.ValidationDate),
+                true,
+                DataSourceUpdateMode.OnPropertyChanged);
         }
     }
 }
