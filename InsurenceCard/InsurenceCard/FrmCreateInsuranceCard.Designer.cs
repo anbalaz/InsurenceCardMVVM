@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBxBirthDate = new System.Windows.Forms.TextBox();
+            this.bttnGenerate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bttnOK
@@ -48,6 +49,7 @@
             this.bttnOK.TabIndex = 1;
             this.bttnOK.Text = "OK";
             this.bttnOK.UseVisualStyleBackColor = true;
+            this.bttnOK.Click += new System.EventHandler(this.bttnOK_Click);
             // 
             // txtBxFirstName
             // 
@@ -122,11 +124,22 @@
             this.txtBxBirthDate.Size = new System.Drawing.Size(139, 20);
             this.txtBxBirthDate.TabIndex = 10;
             // 
+            // bttnGenerate
+            // 
+            this.bttnGenerate.Location = new System.Drawing.Point(293, 196);
+            this.bttnGenerate.Name = "bttnGenerate";
+            this.bttnGenerate.Size = new System.Drawing.Size(104, 23);
+            this.bttnGenerate.TabIndex = 11;
+            this.bttnGenerate.Text = "Generate date";
+            this.bttnGenerate.UseVisualStyleBackColor = true;
+            this.bttnGenerate.Click += new System.EventHandler(this.bttnGenerate_Click);
+            // 
             // FrmCreateInsuranceCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 485);
+            this.Controls.Add(this.bttnGenerate);
             this.Controls.Add(this.txtBxBirthDate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -156,5 +169,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBxBirthDate;
+        private System.Windows.Forms.Button bttnGenerate;
     }
 }

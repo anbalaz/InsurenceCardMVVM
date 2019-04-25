@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Support.Service
 {
@@ -19,6 +15,11 @@ namespace Support.Service
             DateTime dateOfBirth = DateTime.Parse($"19{year}-{month}-{day}");
 
             return dateOfBirth;
+        }
+
+        public DateTime GenerateValidationDate()
+        {
+            return DateTime.Now;
         }
     }
 }

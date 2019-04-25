@@ -46,5 +46,18 @@ namespace InsurenceCard
                 true,
                 DataSourceUpdateMode.OnPropertyChanged);
         }
+
+        private void bttnGenerate_Click(object sender, EventArgs e)
+        {
+            _selectedCountryViewModel.GenerateValidationDate();
+        }
+
+        private void bttnOK_Click(object sender, EventArgs e)
+        {
+            using (IdentityCardShow newFrm = new IdentityCardShow())
+            {
+                newFrm.Show();
+            }
+        }
     }
 }

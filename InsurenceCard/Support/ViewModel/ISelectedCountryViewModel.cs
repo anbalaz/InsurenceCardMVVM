@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace Support.ViewModel
 {
@@ -10,6 +11,7 @@ namespace Support.ViewModel
         string PersonIdNumber { get; set; }
         DateTime ValidationDate { get; set; }
 
+        void GenerateValidationDate();
         void SaveInsuranceCard();
     }
 }

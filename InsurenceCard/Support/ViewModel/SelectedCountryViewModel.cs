@@ -5,11 +5,14 @@ using System.Runtime.CompilerServices;
 
 namespace Support.ViewModel
 {
-    public class SelectedCountryViewModel : ISelectedCountryViewModel, INotifyPropertyChanged
+    public class SelectedCountryViewModel : INotifyPropertyChanged, ISelectedCountryViewModel
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         private string _personIdNumber;
+        private DateTime _getDateOfBirth;
+        private DateTime _validationDate;
+
         public string PersonIdNumber
         {
             get => _personIdNumber;
@@ -29,9 +32,17 @@ namespace Support.ViewModel
             }
         }
 
-        public DateTime ValidationDate { get; set; } = DateTime.Now;
+        public DateTime ValidationDate
+        {
+            get => _validationDate;
+            set
+            {
+                _validationDate = value;
+                NotifyPropertyChanged();
+            }
+        }
+
         private SelectedCountryService _selectedCountryService;
-        private DateTime _getDateOfBirth;
 
 
         public SelectedCountryViewModel(SelectedCountryService selectedCountryService)
@@ -39,17 +50,16 @@ namespace Support.ViewModel
             _selectedCountryService = selectedCountryService;
         }
 
-        //public DateTime GetDateOfBirth(string personIdNumber)
-        //{
-        //    return _selectedCountryService.GetDateOfBirth(personIdNumber);
-        //}
+        public void GenerateValidationDate()
+        {
+            ValidationDate = _selectedCountryService.GenerateValidationDate();
+            NotifyPropertyChanged();
+        }
 
         public void SaveInsuranceCard()
         {
 
         }
-
-
 
         #region NotifypropChanged
         public event PropertyChangedEventHandler PropertyChanged;
