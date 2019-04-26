@@ -11,6 +11,7 @@ namespace InsurenceCard
         {
             InitializeComponent();
             _identityCardShowViewModel = identityCardShowViewModel;
+            BindControls();
         }
 
         private void BindControls()
@@ -25,19 +26,19 @@ namespace InsurenceCard
                 _identityCardShowViewModel,
                 nameof(_identityCardShowViewModel.LastName),
                 true,
-                DataSourceUpdateMode.OnValidation);
+                DataSourceUpdateMode.OnPropertyChanged);
 
             txtBxPersonalID.DataBindings.Add(nameof(txtBxPersonalID.Text),
                 _identityCardShowViewModel,
                 nameof(_identityCardShowViewModel.PersonIdNumber),
                 true,
-                DataSourceUpdateMode.OnValidation);
+                DataSourceUpdateMode.OnPropertyChanged);
 
             txtBxBirthDate.DataBindings.Add(nameof(txtBxBirthDate.Text),
                 _identityCardShowViewModel,
                 nameof(_identityCardShowViewModel.GetDateOfBirth),
                 true,
-                DataSourceUpdateMode.OnValidation);
+                DataSourceUpdateMode.OnPropertyChanged);
 
             txtBxValidationDate.DataBindings.Add(nameof(txtBxValidationDate.Text),
                 _identityCardShowViewModel,

@@ -83,8 +83,6 @@ namespace Support.ViewModel
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
         #endregion
-
     }
 }

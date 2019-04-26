@@ -20,6 +20,5 @@ namespace Support.Service
         {
             return DateTime.Now;
         }
-
     }
 }

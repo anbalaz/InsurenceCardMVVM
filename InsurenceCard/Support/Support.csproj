@@ -46,7 +46,7 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\IdentityCardShowViewModel.cs" />
+    <Compile Include="Service\IdentityCardShowService.cs" />
     <Compile Include="Service\SelectedCountryService.cs" />
     <Compile Include="ViewModel\IdentityCardShowViewModel.cs" />
     <Compile Include="ViewModel\ISelectedCountryViewModel.cs" />

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Support.Service
 {
-    public class IdentityCardShowViewModel
+    public class IdentityCardShowService
     {
         private User _user;
 
-        public IdentityCardShowViewModel(User user)
+        public IdentityCardShowService(User user)
         {
             _user = user;
         }
